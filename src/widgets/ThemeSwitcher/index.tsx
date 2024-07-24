@@ -1,0 +1,21 @@
+import { styled } from 'styled-components';
+import { ReactComponent as Moon2 } from 'shared/assets/icons/moon2.svg';
+import { ReactComponent as Sun } from 'shared/assets/icons/sun3.svg';
+import { Theme } from 'shared/hooks/useTheme';
+
+interface ThemeSwitcherProps {
+  toggleTheme: () => void;
+  theme: Theme;
+}
+
+export const ThemeSwitcher = ({ theme, toggleTheme }: ThemeSwitcherProps) => {
+  return <IconContainer onClick={() => toggleTheme()}>{theme === Theme.Dark ? <Moon2 /> : <Sun />}</IconContainer>;
+};
+
+const IconContainer = styled.div`
+  cursor: pointer;
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+`;

@@ -1,0 +1,44 @@
+<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d_2411_3857)">
+        <path d="M26.1725 22.1323H31.8613V28.4853H37.5502V34.4853H31.8613V40.4853H26.1725V22.1323Z" fill="#5F677A" />
+        <path
+            d="M26.1725 46.1323H37.5502V52.4853H31.8613V64.1323H43.9502V58.4853H62.0836V64.1323H68.128H74.1725V70.1323H56.0391V64.1323H49.6391V70.1323H26.1725V52.4853V46.1323Z"
+            fill="#5F677A" />
+        <rect x="31.8614" y="22.1323" width="5.68889" height="6.35294" fill="#505666" />
+        <rect x="31.8613" y="58.1323" width="5.68889" height="6.02357" fill="#505666" />
+        <rect x="61.903" y="58.4856" width="5.86304" height="5.67032" fill="#505666" />
+        <rect x="31.8613" y="34.1323" width="5.68889" height="6.35294" fill="#747D93" />
+        <rect x="31.8613" y="52.4853" width="5.68889" height="6.0003" fill="#747D93" />
+        <rect x="26.1725" y="40.4853" width="11.3778" height="5.64706" fill="#4F5565" />
+        <rect x="37.545" y="52.4853" width="6.54156" height="6.0003" fill="#D9E4FF" />
+        <rect x="43.4844" y="22.1682" width="6.54156" height="6.3171" fill="#9097A5" />
+        <rect x="67.6309" y="52.3193" width="6.54156" height="6.1663" fill="#D9E4FF" />
+        <rect x="67.6309" y="46.319" width="6.54156" height="6.0003" fill="#9097A5" />
+        <rect x="56.0391" y="46.319" width="11.5958" height="6.0003" fill="#D9E4FF" />
+        <rect x="37.5502" y="58.4856" width="6.53758" height="5.67032" fill="#747D93" />
+        <rect x="49.4727" y="40.3193" width="6.56645" height="12" fill="#9097A5" />
+        <rect x="67.6349" y="58.4856" width="6.53758" height="5.67032" fill="#747D93" />
+        <rect x="49.6391" y="64.108" width="6.4" height="6.02434" fill="#505666" />
+        <path d="M43.974 52.5058H37.545V46.1501H43.974V34.6397H49.4725V52.3009H67.6349V58.4856H43.974V52.5058Z"
+            fill="#AFB8CC" />
+        <rect x="61.903" y="28.2433" width="5.86304" height="12.4345" fill="#9097A5" />
+        <path
+            d="M37.545 22.1682H43.8504V28.3453H49.4946V22.1682H73.9666L74.1697 46.3183H67.5973V28.3453H56.062V40.3497H49.4946V34.7123H43.9927V46.1324H37.545V22.1682Z"
+            fill="#D9E4FF" />
+        <path d="M56.0391 28.3491H62.042V40.6728H67.6309V46.319H56.0391V28.3491Z" fill="#AFB8CC" />
+    </g>
+    <defs>
+        <filter id="filter0_d_2411_3857" x="0.172455" y="0.132324" width="100" height="100" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="13" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.37 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2411_3857" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2411_3857" result="shape" />
+        </filter>
+    </defs>
+</svg>
