@@ -6,7 +6,7 @@ export const newsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API }),
   endpoints: (builder) => ({
     getAllNews: builder.query<NewsType[], void>({
-      query: () => ``,
+      query: () => `news/`,
     }),
     getNewsById: builder.query<FullNews, string>({
       query: (id) => `news/${id}`,
