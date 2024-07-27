@@ -1,5 +1,5 @@
 import AllNews from 'features/allNews';
-import { PageContainer } from 'features/ui/styledComponents';
+import { PageContainer } from 'shared/styledComponents';
 
 const MainPage = () => {
   return (

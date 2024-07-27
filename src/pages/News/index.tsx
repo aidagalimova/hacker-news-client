@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import FullNews from 'features/fullNews';
-import { PageContainer } from 'features/ui/styledComponents';
+import { PageContainer } from 'shared/styledComponents';
 
 const NewsPage = () => {
   const { id } = useParams<{ id: string }>();

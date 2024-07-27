@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { uiActions } from 'features/ui/uiSlice';
 import { CommentsList, commentApi } from 'entities/comments';
 import { Loader } from 'widgets/Loader';
 import { IconSize, Refresh } from 'widgets/Refresh';
 import { PopUp } from 'widgets/PopUp';
+import { uiActions } from 'widgets/uiSlice';
 
 interface CommentsProps {
   newsId: string;

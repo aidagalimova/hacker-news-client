@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FullNews } from '../model/types/newsType';
-import { PixelContainer, Tooltip } from 'features/ui/styledComponents';
+import { PixelContainer, Tooltip } from 'shared/styledComponents';
 
 interface NewsProps {
   news: FullNews;

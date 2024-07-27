@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { News } from '../model/types/newsType';
-import { PixelContainer, Tooltip } from 'features/ui/styledComponents';
 import { ReactComponent as Star } from 'shared/assets/icons/star.svg';
+import { PixelContainer, Tooltip } from 'shared/styledComponents';
 
 interface NewsItemProps {
   news: News;

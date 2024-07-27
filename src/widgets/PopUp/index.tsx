@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { RootState } from 'app/store';
-import { uiActions } from 'features/ui/uiSlice';
-import { PixelContainer } from 'features/ui/styledComponents';
+import { PixelContainer } from 'shared/styledComponents';
+import { uiActions } from 'widgets/uiSlice';
 
 interface PopUpProps {
   content: string;

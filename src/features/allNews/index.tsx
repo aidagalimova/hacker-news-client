@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { uiActions } from 'features/ui/uiSlice';
 import { NewsList, newsApi } from 'entities/news';
 import { Loader } from 'widgets/Loader';
 import { Refresh } from 'widgets/Refresh';
 import { PopUp } from 'widgets/PopUp';
+import { uiActions } from 'widgets/uiSlice';
 
 const refreshInterfal = 60000;
 

@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { commentApi } from 'entities/comments';
 import { newsApi } from 'entities/news';
-import { uiReducer } from 'features/ui/uiSlice';
+import { uiReducer } from 'widgets/uiSlice';
 
 const rootReducer = combineReducers({
   [newsApi.reducerPath]: newsApi.reducer,

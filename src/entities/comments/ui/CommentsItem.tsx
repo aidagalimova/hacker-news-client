@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Comment } from '../model/types/commentType';
-import { PixelBalloon } from 'features/ui/styledComponents';
 import { ReactComponent as DropDown } from 'shared/assets/icons/dropDown.svg';
 import { ReactComponent as DropUp } from 'shared/assets/icons/dropUp.svg';
+import { PixelBalloon } from 'shared/styledComponents';
 
 interface CommentsItemProps {
   comment: Comment;
