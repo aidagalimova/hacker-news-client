@@ -42,6 +42,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    gap: 24px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -49,10 +52,23 @@ const TitleContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 24px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    gap: 16px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 `;
 
 const Title = styled.span`
   font-size: 30px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 28px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 24px;
+  }
 `;
 
 export default AllNews;

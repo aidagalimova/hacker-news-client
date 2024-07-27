@@ -52,6 +52,7 @@ const Container = styled.div`
   gap: 24px;
   width: 100%;
   padding-top: 28px;
+
   .reply {
     margin: 0;
     padding-right: 0;
@@ -61,6 +62,9 @@ const Container = styled.div`
       box-shadow: unset;
     }
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    padding-top: 12px;
+  }
 `;
 
 const CommentContainer = styled(PixelBalloon)`
@@ -69,17 +73,31 @@ const CommentContainer = styled(PixelBalloon)`
   justify-content: flex-start;
   width: 100%;
   padding: 12px 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    padding: 4px 8px;
+  }
 `;
 
 const UserName = styled.span`
   font-family: PressStart2P;
   font-size: 18px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 16px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 14px;
+  }
 `;
 
 const CommentContent = styled.span`
-  overflow-wrap: break-word;
   font-family: monospace;
   font-size: 28px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 24px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 20px;
+  }
 `;
 
 const AllComments = styled.ul`
@@ -103,5 +121,19 @@ const CommentCount = styled.span`
   svg {
     width: 32px;
     height: 32px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 16px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 14px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 `;

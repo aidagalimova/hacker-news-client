@@ -59,6 +59,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    gap: 0px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -73,12 +76,24 @@ const TitleContainer = styled.div`
 const Title = styled.span`
   user-select: none;
   font-size: 20px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 18px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 16px;
+  }
 `;
 
 const Empty = styled.span`
   user-select: none;
   font-size: 20px;
   color: ${(props) => props.theme.secondaryText};
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 18px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 16px;
+  }
 `;
 
 export default Comments;

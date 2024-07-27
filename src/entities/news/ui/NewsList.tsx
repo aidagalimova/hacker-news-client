@@ -24,4 +24,10 @@ const NewsContainer = styled.ul`
   gap: 40px;
   width: 100%;
   list-style: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    gap: 20px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    gap: 16px;
+  }
 `;

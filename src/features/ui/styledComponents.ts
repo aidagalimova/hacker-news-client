@@ -44,6 +44,15 @@ export const PixelBalloon = styled(PixelContainer)`
 
 export const PageContainer = styled.div`
   margin: 104px 72px 48px 72px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    margin: 104px 32px 48px 32px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    margin: 104px 24px 48px 24px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    margin: 104px 16px 48px 16px;
+  }
 `;
 
 export const Tooltip = styled(PixelContainer)`

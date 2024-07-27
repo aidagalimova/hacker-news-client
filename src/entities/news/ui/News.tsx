@@ -31,10 +31,22 @@ export const News = ({ news }: NewsProps) => {
 const Container = styled(PixelContainer)`
   width: 100%;
   padding: 32px 28px 24px 28px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    padding: 28px 24px 20px 24px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding: 24px 20px 16px 20px;
+  }
 `;
 
 const Title = styled.span`
   font-size: 24px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 20px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 18px;
+  }
 `;
 
 const User = styled.div`
@@ -44,6 +56,12 @@ const User = styled.div`
   padding: 0 4px;
   font-size: 18px;
   background-color: ${(props) => props.theme.primaryBg};
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 16px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 14px;
+  }
 `;
 
 const Url = styled.div`
@@ -51,6 +69,12 @@ const Url = styled.div`
   a {
     font-family: monospace;
     font-size: 20px;
+    @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+      font-size: 16px;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+      font-size: 14px;
+    }
   }
 `;
 

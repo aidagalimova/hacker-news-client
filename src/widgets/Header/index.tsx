@@ -38,11 +38,30 @@ const TitleContainer = styled.div`
   flex-direction: row;
   align-items: baseline;
   gap: 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    align-items: end;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 24px;
+    svg {
+      display: none;
+    }
+  }
 `;
 
 const Title = styled.span`
   user-select: none;
   font-size: 32px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 28px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 24px;
+  }
 `;
 
 export default Header;

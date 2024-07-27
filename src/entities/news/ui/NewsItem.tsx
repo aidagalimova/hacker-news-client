@@ -39,6 +39,12 @@ const Container = styled(PixelContainer)`
   padding: 18px 32px;
   background-color: ${({ theme }) => theme.primaryBg};
   cursor: pointer;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    padding: 14px 24px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding: 12px 16px;
+  }
 `;
 
 const Body = styled.div`
@@ -50,6 +56,12 @@ const Body = styled.div`
 const Title = styled.span`
   font-size: 32px;
   font-family: monospace;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 28px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 24px;
+  }
 `;
 
 const Name = styled.span`
@@ -62,6 +74,12 @@ const Name = styled.span`
 
 const NameText = styled.span`
   font-size: 20px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 18px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 16px;
+  }
 `;
 
 const TimeAgoText = styled.span`
@@ -87,6 +105,9 @@ const DateText = styled.span`
   user-select: none;
   color: ${(props) => props.theme.secondaryText};
   font-size: 14px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 10px;
+  }
 `;
 
 const Score = styled.div`

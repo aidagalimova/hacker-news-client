@@ -1,4 +1,5 @@
 import { ThemeProps } from '..';
+import { Breakpoints } from '../breakpoints';
 
 // '#f3f3f3','#c7d9ec'
 export const lightTheme: ThemeProps = {
@@ -9,4 +10,5 @@ export const lightTheme: ThemeProps = {
   secondaryHover: '#444',
   link: '#373565',
   visitedLink: '#810200',
+  breakpoints: Breakpoints,
 };

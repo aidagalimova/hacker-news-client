@@ -1,3 +1,4 @@
+import { Breakpoints } from './breakpoints';
 import { darkTheme } from './themePallete/darkTheme';
 import { lightTheme } from './themePallete/lightTheme';
 import { createGlobalStyle } from 'styled-components';
@@ -10,6 +11,7 @@ interface ThemeProps {
   secondaryHover: string;
   link: string;
   visitedLink: string;
+  breakpoints: typeof Breakpoints;
 }
 
 const GlobalStyles = createGlobalStyle`
@@ -17,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-wrap: break-word;
   }
   
   body {

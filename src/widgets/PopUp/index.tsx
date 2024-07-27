@@ -61,4 +61,7 @@ const Container = styled(PixelContainer)`
 const Content = styled.div`
   font-size: 20px;
   color: ${(props) => props.theme.primaryText};
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    font-size: 16px;
+  }
 `;

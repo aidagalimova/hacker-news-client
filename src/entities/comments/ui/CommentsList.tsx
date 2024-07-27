@@ -23,4 +23,7 @@ const Container = styled.ul`
   flex-direction: column;
   gap: 32px;
   list-style: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
+    gap: 0px;
+  }
 `;
