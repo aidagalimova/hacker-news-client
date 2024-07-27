@@ -22,7 +22,7 @@ const FullNews = ({ id }: NewsProps) => {
       </Back>
       {error && 'data' in error && typeof error.data === 'string' && <div>{error.data}</div>}
       {news && <News news={news} />}
-      <Comments newsId={id} />
+      {!error && <Comments newsId={id} />}
     </Container>
   );
 };

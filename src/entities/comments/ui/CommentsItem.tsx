@@ -12,7 +12,7 @@ interface CommentsItemProps {
 
 export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
   const isHaveComments = comment.comments.length !== 0;
-  const [isCommentsOpen, setIsCommentsOpen] = useState(isChild);
+  const [isCommentsOpen, setIsCommentsOpen] = useState(false);
 
   const ReqursiveComments = () => {
     return (
