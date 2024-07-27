@@ -1,7 +1,6 @@
 import { ThemeProps } from '..';
 import { Breakpoints } from '../breakpoints';
 
-// '#f3f3f3','#c7d9ec'
 export const lightTheme: ThemeProps = {
   primaryBg: '#f3f3f3',
   secondaryBg: '#f3f3f3',

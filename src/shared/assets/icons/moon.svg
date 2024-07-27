@@ -1,44 +1,45 @@
-<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#filter0_d_2411_3857)">
-        <path d="M26.1725 22.1323H31.8613V28.4853H37.5502V34.4853H31.8613V40.4853H26.1725V22.1323Z" fill="#5F677A" />
-        <path
-            d="M26.1725 46.1323H37.5502V52.4853H31.8613V64.1323H43.9502V58.4853H62.0836V64.1323H68.128H74.1725V70.1323H56.0391V64.1323H49.6391V70.1323H26.1725V52.4853V46.1323Z"
-            fill="#5F677A" />
-        <rect x="31.8614" y="22.1323" width="5.68889" height="6.35294" fill="#505666" />
-        <rect x="31.8613" y="58.1323" width="5.68889" height="6.02357" fill="#505666" />
-        <rect x="61.903" y="58.4856" width="5.86304" height="5.67032" fill="#505666" />
-        <rect x="31.8613" y="34.1323" width="5.68889" height="6.35294" fill="#747D93" />
-        <rect x="31.8613" y="52.4853" width="5.68889" height="6.0003" fill="#747D93" />
-        <rect x="26.1725" y="40.4853" width="11.3778" height="5.64706" fill="#4F5565" />
-        <rect x="37.545" y="52.4853" width="6.54156" height="6.0003" fill="#D9E4FF" />
-        <rect x="43.4844" y="22.1682" width="6.54156" height="6.3171" fill="#9097A5" />
-        <rect x="67.6309" y="52.3193" width="6.54156" height="6.1663" fill="#D9E4FF" />
-        <rect x="67.6309" y="46.319" width="6.54156" height="6.0003" fill="#9097A5" />
-        <rect x="56.0391" y="46.319" width="11.5958" height="6.0003" fill="#D9E4FF" />
-        <rect x="37.5502" y="58.4856" width="6.53758" height="5.67032" fill="#747D93" />
-        <rect x="49.4727" y="40.3193" width="6.56645" height="12" fill="#9097A5" />
-        <rect x="67.6349" y="58.4856" width="6.53758" height="5.67032" fill="#747D93" />
-        <rect x="49.6391" y="64.108" width="6.4" height="6.02434" fill="#505666" />
-        <path d="M43.974 52.5058H37.545V46.1501H43.974V34.6397H49.4725V52.3009H67.6349V58.4856H43.974V52.5058Z"
-            fill="#AFB8CC" />
-        <rect x="61.903" y="28.2433" width="5.86304" height="12.4345" fill="#9097A5" />
-        <path
-            d="M37.545 22.1682H43.8504V28.3453H49.4946V22.1682H73.9666L74.1697 46.3183H67.5973V28.3453H56.062V40.3497H49.4946V34.7123H43.9927V46.1324H37.545V22.1682Z"
-            fill="#D9E4FF" />
-        <path d="M56.0391 28.3491H62.042V40.6728H67.6309V46.319H56.0391V28.3491Z" fill="#AFB8CC" />
-    </g>
-    <defs>
-        <filter id="filter0_d_2411_3857" x="0.172455" y="0.132324" width="100" height="100" filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha" />
-            <feOffset dy="4" />
-            <feGaussianBlur stdDeviation="13" />
-            <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.37 0" />
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2411_3857" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2411_3857" result="shape" />
-        </filter>
-    </defs>
+<svg width="342" height="364" viewBox="0 0 342 364" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M141 223H161V243H181V263H262V283H181V263H161V243H141V223Z" fill="#F59F54" />
+    <rect x="120" width="122" height="21" fill="#444444" />
+    <rect x="120" y="343" width="122" height="21" fill="#444444" />
+    <rect x="80" y="21" width="40" height="20" fill="#444444" />
+    <path d="M60 61H80V41H120V21H242V41H140.5V61H100V81H80V101.5H60V141.919L40 142V243H20V122H40V81H60V61Z"
+        fill="#EBE527" />
+    <rect x="80" y="323" width="40" height="20" fill="#444444" />
+    <rect x="80" y="303" width="40" height="20" fill="white" />
+    <rect x="302" y="223" width="20" height="40" fill="#F59F54" />
+    <rect x="282" y="263" width="20" height="40" fill="#F59F54" />
+    <rect x="262" y="243" width="20" height="20" fill="#F59F54" />
+    <rect x="282" y="243" width="20" height="20" fill="#EBE527" />
+    <path d="M120 323H222V303H282V323H242V343H120V323Z" fill="#F59F54" />
+    <rect x="242" y="323" width="40" height="20" fill="#444444" />
+    <rect x="242" y="21" width="40" height="20" fill="#444444" />
+    <rect x="242" y="41" width="40" height="20" fill="#EBE527" />
+    <rect x="60" y="41" width="20" height="20" fill="#444444" />
+    <rect x="60" y="303" width="20" height="20" fill="#444444" />
+    <rect x="282" y="303" width="20" height="20" fill="#444444" />
+    <rect x="282" y="41" width="20" height="20" fill="#444444" />
+    <rect x="40" y="61" width="20" height="20" fill="#444444" />
+    <rect x="40" y="283" width="20" height="20" fill="#444444" />
+    <rect x="161" y="223" width="20" height="20" fill="#444444" />
+    <rect x="161" y="122" width="20" height="20" fill="#444444" />
+    <rect x="181" y="243" width="81" height="20" fill="#444444" />
+    <rect x="181" y="102" width="81" height="20" fill="#444444" />
+    <rect x="60" y="283" width="20" height="20" fill="white" />
+    <rect x="20" y="81" width="20" height="41" fill="#444444" />
+    <rect y="122" width="20" height="121" fill="#444444" />
+    <rect x="141" y="142" width="20" height="81" fill="#444444" />
+    <rect x="20" y="243" width="20" height="40" fill="#444444" />
+    <rect x="40" y="243" width="20" height="40" fill="white" />
+    <rect x="302" y="263" width="20" height="40" fill="#444444" />
+    <rect x="302" y="61" width="20" height="40" fill="#444444" />
+    <rect x="322" y="223" width="20" height="40" fill="#444444" />
+    <rect x="322" y="101" width="20" height="41" fill="#444444" />
+    <path d="M282 203H342V223H302V243H262V223H282V203Z" fill="#444444" />
+    <path
+        d="M140.5 41H242V61H302V101H322V142H302V122H261.5V102H242H181V122H161V142H141V222V243H161V263H181V283H262V263H282V303H222V323H120H80V303H60V283H40V243V142H60V101.5H80V81H100V61H140.5V41Z"
+        fill="#EBE527" />
+    <path d="M282 162H342V142H302V122H261.5V142H282V162Z" fill="#444444" />
+    <path d="M20 122H40V81H59.75L60 61H80V41H120V61H80V81H59.75L60 101.5V122V142H40V243H20V142V122Z" fill="white" />
+    <rect x="120" y="21" width="20" height="20" fill="white" />
 </svg>

@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
-import { ReactComponent as Moon2 } from 'shared/assets/icons/moon2.svg';
-import { ReactComponent as Sun } from 'shared/assets/icons/sun3.svg';
+import { ReactComponent as Moon2 } from 'shared/assets/icons/moon.svg';
+import { ReactComponent as Sun } from 'shared/assets/icons/sun.svg';
 import { Theme } from 'shared/hooks/useTheme';
 
 interface ThemeSwitcherProps {
