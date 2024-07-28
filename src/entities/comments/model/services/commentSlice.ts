@@ -3,7 +3,7 @@ import { Comments } from '../types/commentType';
 
 export const commentApi = createApi({
   reducerPath: 'commentApi',
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.SERVER_API }),
   endpoints: (builder) => ({
     getCommentsById: builder.query<Comments, string>({
       query: (id) => `comments/${id}`,

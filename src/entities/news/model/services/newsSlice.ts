@@ -3,7 +3,7 @@ import { FullNews, NewsType } from 'entities/news';
 
 export const newsApi = createApi({
   reducerPath: 'newsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.SERVER_API }),
   endpoints: (builder) => ({
     getAllNews: builder.query<NewsType[], void>({
       query: () => `news/`,

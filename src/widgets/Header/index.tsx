@@ -17,7 +17,7 @@ const Header = ({ children }: HeaderProps) => {
   );
 };
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   z-index: 5;
@@ -53,7 +53,7 @@ const TitleContainer = styled.div`
   }
 `;
 
-const Title = styled.span`
+const Title = styled.h1`
   user-select: none;
   font-size: 32px;
   @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
