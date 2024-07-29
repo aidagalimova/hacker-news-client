@@ -9,20 +9,22 @@ interface PopUpProps {
   content: string;
 }
 
+const hideTime = 1000;
+
 export const PopUp = ({ content }: PopUpProps) => {
   const { isDisplay } = useSelector((state: RootState) => state.ui.popUp);
   const dispatch = useDispatch();
 
   useEffect(() => {
     return () => {
-      dispatch(uiActions.hideModal());
+      dispatch(uiActions.hidePopUp());
     };
   }, []);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
-      dispatch(uiActions.hideModal());
-    }, 1000);
+      dispatch(uiActions.hidePopUp());
+    }, hideTime);
     return () => clearTimeout(timerId);
   }, [isDisplay]);
 

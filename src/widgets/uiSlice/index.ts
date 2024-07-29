@@ -19,7 +19,7 @@ export const uiSlice = createSlice({
     showPopUp: (state) => {
       state.popUp.isDisplay = true;
     },
-    hideModal: (state) => {
+    hidePopUp: (state) => {
       state.popUp.isDisplay = false;
     },
   },
