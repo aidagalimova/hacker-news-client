@@ -1,6 +1,6 @@
 export interface Comment {
   id: number;
-  user: string | null;
+  user: string;
   content: string;
   comments: Comment[];
   comments_count: number;

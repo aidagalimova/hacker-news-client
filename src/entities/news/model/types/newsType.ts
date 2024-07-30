@@ -2,7 +2,7 @@ export interface News {
   id: number;
   title: string;
   points?: number | null;
-  user?: string | null;
+  user: string;
   date: string;
   timeAgo: string;
 }
