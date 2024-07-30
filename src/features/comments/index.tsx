@@ -5,12 +5,11 @@ import { Loader } from 'widgets/Loader';
 import { IconSize, Refresh } from 'widgets/Refresh';
 import { PopUp } from 'widgets/PopUp';
 import { uiActions } from 'widgets/uiSlice';
+import { refreshInterfal } from 'shared/const/api';
 
 interface CommentsProps {
   newsId: string;
 }
-
-const refreshInterfal = 60000;
 
 const Comments = ({ newsId }: CommentsProps) => {
   const dispatch = useDispatch();
@@ -25,14 +24,19 @@ const Comments = ({ newsId }: CommentsProps) => {
     return <Loader />;
   }
 
-  if (error) {
-    return null;
-  }
-
   const handleRefetch = () => {
     dispatch(uiActions.showPopUp());
     refetch();
   };
+
+  if (error) {
+    return (
+      <ErrorContainer>
+        <span>Something went wrong</span>
+        <Refresh handleClick={handleRefetch} size={IconSize.Small} />
+      </ErrorContainer>
+    );
+  }
 
   return (
     <Container>
@@ -96,4 +100,9 @@ const Empty = styled.span`
   }
 `;
 
+const ErrorContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+`;
 export default Comments;

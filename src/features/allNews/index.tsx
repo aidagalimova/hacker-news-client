@@ -5,8 +5,7 @@ import { Loader } from 'widgets/Loader';
 import { Refresh } from 'widgets/Refresh';
 import { PopUp } from 'widgets/PopUp';
 import { uiActions } from 'widgets/uiSlice';
-
-const refreshInterfal = 60000;
+import { refreshInterfal } from 'shared/const/api';
 
 const AllNews = () => {
   const dispatch = useDispatch();
