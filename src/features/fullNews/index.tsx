@@ -20,7 +20,7 @@ const FullNews = ({ id }: NewsProps) => {
       <Back>
         <Link to={'/'}>&#x2190; Back</Link>
       </Back>
-      {error && 'data' in error && typeof error.data === 'string' && <div>{error.data}</div>}
+      {error && <div>Something went wrong</div>}
       {news && <News news={news} />}
       {!error && <Comments newsId={id} />}
     </Container>
