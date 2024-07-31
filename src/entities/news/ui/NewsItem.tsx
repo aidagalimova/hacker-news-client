@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { News } from '../model/types/newsType';
 import { ReactComponent as Star } from 'shared/assets/icons/star.svg';
@@ -10,26 +10,26 @@ interface NewsItemProps {
 
 export const NewsItem = ({ news }: NewsItemProps) => {
   const { title, user, points, date, timeAgo } = news;
-  const navigate = useNavigate();
-
   return (
-    <Container onClick={() => navigate(`${news.id}`)}>
-      <Name>
-        <NameText>by {user}</NameText>
-      </Name>
-      <Body>
-        <Title>{title}</Title>
-        <Score>
-          <ScoreText>{points}</ScoreText>
-          <Star />
-        </Score>
-        <Date>
-          <DateText>{date}</DateText>
-          <Tooltip>
-            <TimeAgoText>{timeAgo}</TimeAgoText>
-          </Tooltip>
-        </Date>
-      </Body>
+    <Container>
+      <LinkContainer to={`${news.id}`}>
+        <Name>
+          <NameText>by {user}</NameText>
+        </Name>
+        <Body>
+          <Title>{title}</Title>
+          <Score>
+            <ScoreText>{points}</ScoreText>
+            <Star />
+          </Score>
+          <Date>
+            <DateText>{date}</DateText>
+            <Tooltip>
+              <TimeAgoText>{timeAgo}</TimeAgoText>
+            </Tooltip>
+          </Date>
+        </Body>
+      </LinkContainer>
     </Container>
   );
 };
@@ -47,6 +47,17 @@ const Container = styled(PixelContainer)`
   }
 `;
 
+const LinkContainer = styled(Link)`
+  display: inherit;
+  color: inherit;
+  text-decoration: inherit;
+  &:hover {
+    filter: none;
+  }
+  &:visited {
+    color: inherit;
+  }
+`;
 const Body = styled.div`
   display: flex;
   flex-direction: row;

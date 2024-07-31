@@ -7,19 +7,23 @@ export enum IconSize {
 }
 
 interface RefreshProps {
+  isFetching: boolean;
   size?: IconSize;
   handleClick: () => void;
 }
 
-export const Refresh = ({ size, handleClick }: RefreshProps) => {
+export const Refresh = ({ isFetching, size, handleClick }: RefreshProps) => {
   return (
-    <Spin onClick={handleClick} className={`${size ? size : ''}`}>
+    <Spin onClick={handleClick} className={`${size ? size : ''}`} disabled={isFetching}>
       <RefreshIcon />
     </Spin>
   );
 };
 
-const Spin = styled.div`
+const Spin = styled.button`
+  background: none;
+  outline: none;
+  border: none;
   cursor: pointer;
   svg {
     width: 32px;
@@ -33,6 +37,10 @@ const Spin = styled.div`
   }
   &:hover {
     animation: rotate 3s 1;
+  }
+
+  &:disabled {
+    cursor: default;
   }
 
   @keyframes rotate {

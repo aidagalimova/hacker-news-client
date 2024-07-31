@@ -4,14 +4,15 @@ import { Comment } from '../model/types/commentType';
 
 interface CommentsProps {
   comments: Comment[];
+  isChild?: boolean;
 }
 
-export const CommentsList = ({ comments }: CommentsProps) => {
+export const CommentsList = ({ comments, isChild }: CommentsProps) => {
   return (
     <Container>
       {comments.map((item) => (
         <li key={item.id}>
-          <CommentsItem comment={item} />
+          <CommentsItem comment={item} isChild={isChild} />
         </li>
       ))}
     </Container>

@@ -53,6 +53,9 @@ export const PageContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 104px 16px 48px 16px;
   }
+  @media (min-width: ${({ theme }) => theme.breakpoints.desctopL}px) {
+    max-width: 1920px;
+  }
 `;
 
 export const Tooltip = styled(PixelContainer)`

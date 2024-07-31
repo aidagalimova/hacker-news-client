@@ -12,13 +12,11 @@ const AllNews = () => {
   const {
     data: news,
     isLoading,
+    isFetching,
     error,
     refetch,
   } = newsApi.useGetAllNewsQuery(undefined, { pollingInterval: refreshInterfal });
 
-  if (error && 'data' in error && typeof error.data === 'string') {
-    return <div>{error.data}</div>;
-  }
   const handleRefetch = () => {
     dispatch(uiActions.showPopUp());
     refetch();
@@ -28,9 +26,10 @@ const AllNews = () => {
     <Container>
       <TitleContainer>
         <Title>Newest</Title>
-        <Refresh handleClick={handleRefetch} />
+        <Refresh isFetching={isFetching} handleClick={handleRefetch} />
       </TitleContainer>
       {news && <NewsList news={news} />}
+      {error && <div>Something went wrong</div>}
       {isLoading && <Loader />}
       <PopUp content="Refreshed" />
     </Container>

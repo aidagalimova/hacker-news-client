@@ -16,6 +16,7 @@ const Comments = ({ newsId }: CommentsProps) => {
   const {
     data: comments,
     isLoading,
+    isFetching,
     error,
     refetch,
   } = commentApi.useGetCommentsByIdQuery(newsId, { pollingInterval: refreshInterfal });
@@ -29,11 +30,13 @@ const Comments = ({ newsId }: CommentsProps) => {
     refetch();
   };
 
+  const CommentRefresh = () => <Refresh isFetching={isFetching} handleClick={handleRefetch} size={IconSize.Small} />;
+
   if (error) {
     return (
       <ErrorContainer>
         <span>Something went wrong</span>
-        <Refresh handleClick={handleRefetch} size={IconSize.Small} />
+        <CommentRefresh />
       </ErrorContainer>
     );
   }
@@ -44,14 +47,14 @@ const Comments = ({ newsId }: CommentsProps) => {
         <>
           <TitleContainer>
             <Title>{comments.commentsCount} comments:</Title>
-            <Refresh handleClick={handleRefetch} size={IconSize.Small} />
+            <CommentRefresh />
           </TitleContainer>
           <CommentsList comments={comments.comments} />
         </>
       ) : (
         <TitleContainer>
           <Empty>No comments yet</Empty>
-          <Refresh handleClick={handleRefetch} size={IconSize.Small} />
+          <CommentRefresh />
         </TitleContainer>
       )}
       <PopUp content="Refreshed" />

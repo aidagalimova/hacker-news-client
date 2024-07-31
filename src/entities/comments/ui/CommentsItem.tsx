@@ -4,6 +4,7 @@ import { Comment } from '../model/types/commentType';
 import { ReactComponent as DropDown } from 'shared/assets/icons/dropDown.svg';
 import { ReactComponent as DropUp } from 'shared/assets/icons/dropUp.svg';
 import { PixelBalloon } from 'shared/styledComponents';
+import { CommentsList } from './CommentsList';
 
 interface CommentsItemProps {
   comment: Comment;
@@ -11,20 +12,8 @@ interface CommentsItemProps {
 }
 
 export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
-  const isHaveComments = comment.comments.length !== 0;
+  const isHaveComments = !!comment.comments.length;
   const [isCommentsOpen, setIsCommentsOpen] = useState(false);
-
-  const ReqursiveComments = () => {
-    return (
-      <AllComments>
-        {comment.comments.map((item) => (
-          <li key={item.id}>
-            <CommentsItem comment={item} isChild />
-          </li>
-        ))}
-      </AllComments>
-    );
-  };
 
   return (
     <Container>
@@ -39,7 +28,7 @@ export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
             </CommentCount>
           )}
         </CommentsCountContainer>
-        {isCommentsOpen && isHaveComments && <ReqursiveComments />}
+        {isCommentsOpen && isHaveComments && <CommentsList comments={comment.comments} isChild />}
       </CommentContainer>
     </Container>
   );
@@ -98,10 +87,6 @@ const CommentContent = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 20px;
   }
-`;
-
-const AllComments = styled.ul`
-  list-style: none;
 `;
 
 const CommentsCountContainer = styled.div`

@@ -1,4 +1,4 @@
-import { Breakpoints } from './breakpoints';
+import { Breakpoints } from 'shared/const/breakpoints';
 import { darkTheme } from './themePallete/darkTheme';
 import { lightTheme } from './themePallete/lightTheme';
 import { createGlobalStyle } from 'styled-components';

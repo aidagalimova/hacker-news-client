@@ -1,5 +1,5 @@
 import { ThemeProps } from '..';
-import { Breakpoints } from '../breakpoints';
+import { Breakpoints } from 'shared/const/breakpoints';
 
 export const darkTheme: ThemeProps = {
   primaryBg: '#161616',
