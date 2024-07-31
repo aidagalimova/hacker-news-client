@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { RootState } from 'app/store';
 import { PixelContainer } from 'shared/styledComponents';
-import { uiActions } from 'widgets/uiSlice';
+import { uiActions } from 'shared/uiSlice';
 
 interface PopUpProps {
   content: string;

@@ -25,12 +25,15 @@ const Spin = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+
+  fill: ${({ theme }) => theme.primaryText};
   svg {
     width: 32px;
     height: 32px;
   }
   &.small {
     svg {
+      fill: ${({ theme }) => theme.primaryText};
       width: 20px;
       height: 20px;
     }

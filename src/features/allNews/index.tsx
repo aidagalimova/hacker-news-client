@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { NewsList, newsApi } from 'entities/news';
-import { Loader } from 'widgets/Loader';
-import { Refresh } from 'widgets/Refresh';
-import { PopUp } from 'widgets/PopUp';
-import { uiActions } from 'widgets/uiSlice';
+import { Loader } from 'shared/ui/Loader';
+import { Refresh } from 'shared/ui/Refresh';
+import { PopUp } from 'shared/ui/PopUp';
+import { uiActions } from 'shared/uiSlice';
 import { refreshInterfal } from 'shared/const/api';
 
 const AllNews = () => {

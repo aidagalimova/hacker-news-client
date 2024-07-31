@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Comments from 'features/comments';
 import { News, newsApi } from 'entities/news';
-import { Loader } from 'widgets/Loader';
+import { Loader } from 'shared/ui/Loader';
 
 interface NewsProps {
   id: string;
