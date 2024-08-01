@@ -53,9 +53,6 @@ export const PageContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     margin: 104px 16px 48px 16px;
   }
-  @media (min-width: ${({ theme }) => theme.breakpoints.desctopL}px) {
-    max-width: 1920px;
-  }
 `;
 
 export const Tooltip = styled(PixelContainer)`
@@ -68,4 +65,10 @@ export const Tooltip = styled(PixelContainer)`
   padding: 2px 0;
   text-align: center;
   background-color: ${(props) => props.theme.primaryBg};
+`;
+
+export const ContentLayout = styled.div`
+  max-width: 1920px;
+  align-self: center;
+  width: 100%;
 `;

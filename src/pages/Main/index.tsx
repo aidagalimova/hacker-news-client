@@ -1,11 +1,13 @@
 import AllNews from 'features/allNews';
-import { PageContainer } from 'shared/styledComponents';
+import { ContentLayout, PageContainer } from 'shared/styledComponents';
 
 const MainPage = () => {
   return (
-    <PageContainer>
-      <AllNews />
-    </PageContainer>
+    <ContentLayout>
+      <PageContainer>
+        <AllNews />
+      </PageContainer>
+    </ContentLayout>
   );
 };
 

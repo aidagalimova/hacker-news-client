@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Logo } from 'shared/assets/icons/play.svg';
+import { ContentLayout } from 'shared/styledComponents';
 
 interface HeaderProps {
   children?: ReactNode;
@@ -9,10 +10,12 @@ interface HeaderProps {
 const Header = ({ children }: HeaderProps) => {
   return (
     <HeaderContainer>
-      <TitleContainer>
-        <Title>HACKER NEWS</Title> <Logo />
-      </TitleContainer>
-      {children}
+      <HeaderLayout>
+        <TitleContainer>
+          <Title>HACKER NEWS</Title> <Logo />
+        </TitleContainer>
+        {children}
+      </HeaderLayout>
     </HeaderContainer>
   );
 };
@@ -21,11 +24,6 @@ const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   z-index: 5;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
   width: 100%;
   height: 80px;
   padding: 16px 32px;
@@ -33,6 +31,14 @@ const HeaderContainer = styled.header`
   border-bottom: 4px solid ${(props) => props.theme.primaryText};
 `;
 
+const HeaderLayout = styled(ContentLayout)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+`;
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: row;

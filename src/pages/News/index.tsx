@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import FullNews from 'features/fullNews';
-import { PageContainer } from 'shared/styledComponents';
+import { ContentLayout, PageContainer } from 'shared/styledComponents';
 
 const NewsPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -9,9 +9,11 @@ const NewsPage = () => {
   }
 
   return (
-    <PageContainer>
-      <FullNews id={id} />
-    </PageContainer>
+    <ContentLayout>
+      <PageContainer>
+        <FullNews id={id} />
+      </PageContainer>
+    </ContentLayout>
   );
 };
 
