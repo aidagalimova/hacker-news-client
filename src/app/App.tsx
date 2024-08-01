@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
 import { Provider as StoreProvider } from 'react-redux';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import router from './router';
 import store from './store';
 import { GlobalStyles, lightTheme, darkTheme } from './theme';
@@ -16,19 +16,12 @@ function App() {
     <StoreProvider store={store}>
       <ThemeProvider theme={theme === Theme.Light ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <AppLayout>
-          <Header>
-            <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
-          </Header>
-          <RouterProvider router={router} />
-        </AppLayout>
+        <Header>
+          <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
+        </Header>
+        <RouterProvider router={router} />
       </ThemeProvider>
     </StoreProvider>
   );
 }
-
-const AppLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 export default App;

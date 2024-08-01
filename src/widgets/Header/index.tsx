@@ -36,8 +36,6 @@ const HeaderLayout = styled(ContentLayout)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  margin: 0 auto;
 `;
 const TitleContainer = styled.div`
   display: flex;

@@ -69,6 +69,6 @@ export const Tooltip = styled(PixelContainer)`
 
 export const ContentLayout = styled.div`
   max-width: 1920px;
-  align-self: center;
   width: 100%;
+  margin: 0 auto;
 `;
