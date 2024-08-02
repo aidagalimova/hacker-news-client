@@ -5,11 +5,12 @@ import { Comment } from '../model/types/commentType';
 interface CommentsProps {
   comments: Comment[];
   isChild?: boolean;
+  isClosed?: boolean;
 }
 
-export const CommentsList = ({ comments, isChild }: CommentsProps) => {
+export const CommentsList = ({ comments, isChild, isClosed }: CommentsProps) => {
   return (
-    <Container>
+    <Container className={isClosed ? 'closed' : ''}>
       {comments.map((item) => (
         <li key={item.id}>
           <CommentsItem comment={item} isChild={isChild} />
@@ -24,6 +25,9 @@ const Container = styled.ul`
   flex-direction: column;
   gap: 32px;
   list-style: none;
+  &.closed {
+    display: none;
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
     gap: 0px;
   }

@@ -5,6 +5,7 @@ import { ReactComponent as DropDown } from 'shared/assets/icons/dropDown.svg';
 import { ReactComponent as DropUp } from 'shared/assets/icons/dropUp.svg';
 import { PixelBalloon } from 'shared/styledComponents';
 import { CommentsList } from './CommentsList';
+import { Loader } from 'shared/ui/Loader';
 
 interface CommentsItemProps {
   comment: Comment;
@@ -14,6 +15,14 @@ interface CommentsItemProps {
 export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
   const isHaveComments = !!comment.comments.length;
   const [isCommentsOpen, setIsCommentsOpen] = useState(false);
+  const [isCommentsLoaded, setIsCommentsLoaded] = useState(false);
+
+  const handleOpen = () => {
+    setIsCommentsOpen((prev) => !prev);
+    if (!isCommentsLoaded) {
+      setTimeout(() => setIsCommentsLoaded(true), 500);
+    }
+  };
 
   return (
     <Container>
@@ -22,13 +31,18 @@ export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
         <CommentContent dangerouslySetInnerHTML={{ __html: comment.content }}></CommentContent>
         <CommentsCountContainer>
           {isHaveComments && (
-            <CommentCount onClick={() => setIsCommentsOpen((prev) => !prev)}>
-              {comment.comments.length} comments
+            <CommentCount onClick={handleOpen}>
+              {comment.commentsCount} comments
               {isCommentsOpen ? <DropUp /> : <DropDown />}
             </CommentCount>
           )}
         </CommentsCountContainer>
-        {isCommentsOpen && isHaveComments && <CommentsList comments={comment.comments} isChild />}
+        {isCommentsOpen && !isCommentsLoaded && (
+          <LoaderContainer>
+            <Loader />
+          </LoaderContainer>
+        )}
+        {isCommentsLoaded && <CommentsList comments={comment.comments} isChild isClosed={!isCommentsOpen} />}
       </CommentContainer>
     </Container>
   );
@@ -121,4 +135,7 @@ const CommentCount = styled.span`
       height: 24px;
     }
   }
+`;
+const LoaderContainer = styled.div`
+  align-self: center;
 `;
