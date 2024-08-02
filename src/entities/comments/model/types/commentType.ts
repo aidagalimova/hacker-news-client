@@ -3,7 +3,7 @@ export interface Comment {
   user: string;
   content: string;
   comments: Comment[];
-  comments_count: number;
+  commentsCount: number;
 }
 
 export interface Comments {

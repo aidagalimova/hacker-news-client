@@ -1,14 +1,15 @@
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { useAppDispatch } from 'app/store';
 import { NewsList, newsApi } from 'entities/news';
 import { Loader } from 'shared/ui/Loader';
 import { Refresh } from 'shared/ui/Refresh';
 import { PopUp } from 'shared/ui/PopUp';
+import { Error } from 'shared/ui/ErrorMessage';
 import { uiActions } from 'shared/uiSlice';
 import { refreshInterfal } from 'shared/const/api';
 
 const AllNews = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const {
     data: news,
     isLoading,
@@ -29,7 +30,7 @@ const AllNews = () => {
         <Refresh isFetching={isFetching} handleClick={handleRefetch} />
       </TitleContainer>
       {news && <NewsList news={news} />}
-      {error && <div>Something went wrong</div>}
+      {error && <Error />}
       {isLoading && <Loader />}
       <PopUp content="Refreshed" />
     </Container>

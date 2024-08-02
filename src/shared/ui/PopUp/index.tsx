@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { RootState } from 'app/store';
+import { RootState, useAppDispatch } from 'app/store';
 import { PixelContainer } from 'shared/styledComponents';
 import { uiActions } from 'shared/uiSlice';
 
@@ -13,7 +13,7 @@ const hideTime = 1000;
 
 export const PopUp = ({ content }: PopUpProps) => {
   const { isDisplay } = useSelector((state: RootState) => state.ui.popUp);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     return () => {

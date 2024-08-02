@@ -4,6 +4,7 @@ import { CommentsList, commentApi } from 'entities/comments';
 import { Loader } from 'shared/ui/Loader';
 import { IconSize, Refresh } from 'shared/ui/Refresh';
 import { PopUp } from 'shared/ui/PopUp';
+import { Error } from 'shared/ui/ErrorMessage';
 import { uiActions } from 'shared/uiSlice';
 import { refreshInterfal } from 'shared/const/api';
 
@@ -30,14 +31,11 @@ const Comments = ({ newsId }: CommentsProps) => {
     refetch();
   };
 
-  const CommentRefresh = () => <Refresh isFetching={isFetching} handleClick={handleRefetch} size={IconSize.Small} />;
-
   if (error) {
     return (
-      <ErrorContainer>
-        <span>Something went wrong</span>
-        <CommentRefresh />
-      </ErrorContainer>
+      <Error>
+        <Refresh isFetching={isFetching} handleClick={handleRefetch} size={IconSize.Small} />
+      </Error>
     );
   }
 
@@ -47,14 +45,14 @@ const Comments = ({ newsId }: CommentsProps) => {
         <>
           <TitleContainer>
             <Title>{comments.commentsCount} comments:</Title>
-            <CommentRefresh />
+            <Refresh isFetching={isFetching} handleClick={handleRefetch} size={IconSize.Small} />
           </TitleContainer>
           <CommentsList comments={comments.comments} />
         </>
       ) : (
         <TitleContainer>
           <Empty>No comments yet</Empty>
-          <CommentRefresh />
+          <Refresh isFetching={isFetching} handleClick={handleRefetch} size={IconSize.Small} />
         </TitleContainer>
       )}
       <PopUp content="Refreshed" />
@@ -103,9 +101,4 @@ const Empty = styled.span`
   }
 `;
 
-const ErrorContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-`;
 export default Comments;
