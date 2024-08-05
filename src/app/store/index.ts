@@ -7,7 +7,7 @@ import { uiReducer } from 'shared/uiSlice';
 const rootReducer = combineReducers({
   [newsApi.reducerPath]: newsApi.reducer,
   [commentApi.reducerPath]: commentApi.reducer,
-  ui: uiReducer,
+  uiState: uiReducer,
 });
 
 const store = configureStore({

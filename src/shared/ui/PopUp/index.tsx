@@ -12,7 +12,7 @@ interface PopUpProps {
 const hideTime = 1000;
 
 export const PopUp = ({ content }: PopUpProps) => {
-  const { isDisplay } = useSelector((state: RootState) => state.ui.popUp);
+  const { isDisplay } = useSelector((state: RootState) => state.uiState.popUp);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
