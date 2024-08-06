@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DOMPurify from 'dompurify';
 import styled from 'styled-components';
 import { Comment } from '../model/types/commentType';
 import { ReactComponent as DropDown } from 'shared/assets/icons/dropDown.svg';
@@ -24,11 +25,13 @@ export const CommentsItem = ({ comment, isChild = false }: CommentsItemProps) =>
     }
   };
 
+  const cleanContentHtml = { __html: DOMPurify.sanitize(comment.content) };
+
   return (
     <Container>
       <UserName>{comment.user}</UserName>
       <CommentContainer className={!isChild ? '' : 'reply'}>
-        <CommentContent dangerouslySetInnerHTML={{ __html: comment.content }}></CommentContent>
+        <CommentContent dangerouslySetInnerHTML={cleanContentHtml}></CommentContent>
         <CommentsCountContainer>
           {hasComments && (
             <CommentCount onClick={handleOpen}>
