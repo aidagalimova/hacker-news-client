@@ -12,31 +12,26 @@ interface RefreshProps {
   handleClick: () => void;
 }
 
-export const Refresh = ({ isFetching, size, handleClick }: RefreshProps) => {
+export const Refresh = ({ isFetching, handleClick, size = IconSize.Middle }: RefreshProps) => {
   return (
-    <Spin onClick={handleClick} className={`${size ? size : ''}`} disabled={isFetching}>
+    <Spin onClick={handleClick} size={size} disabled={isFetching}>
       <RefreshIcon />
     </Spin>
   );
 };
 
-const Spin = styled.button`
+const Spin = styled.button<{ size: IconSize }>`
   background: none;
   outline: none;
   border: none;
   cursor: pointer;
-
   color: ${({ theme }) => theme.primaryText};
+
   svg {
-    width: 32px;
-    height: 32px;
+    width: ${(props) => (props.size === IconSize.Middle ? '32px' : '20px')};
+    height: ${(props) => (props.size === IconSize.Middle ? '32px' : '20px')};
   }
-  &.small {
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
+
   &:hover {
     animation: rotate 3s 1;
   }

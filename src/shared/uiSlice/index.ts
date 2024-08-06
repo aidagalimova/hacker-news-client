@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface uiSchema {
+interface UiSchema {
   popUp: {
     isDisplay: boolean;
   };
 }
 
-const initialState: uiSchema = {
+const initialState: UiSchema = {
   popUp: {
     isDisplay: false,
   },

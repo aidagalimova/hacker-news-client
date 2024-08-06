@@ -1,12 +1,31 @@
 import styled from 'styled-components';
 import { useAppDispatch } from 'app/store';
-import { NewsList, newsApi } from 'entities/news';
+import { NewsList, NewsType, newsApi } from 'entities/news';
 import { Loader } from 'shared/ui/Loader';
 import { Refresh } from 'shared/ui/Refresh';
 import { PopUp } from 'shared/ui/PopUp';
 import { Error } from 'shared/ui/ErrorMessage';
 import { uiActions } from 'shared/uiSlice';
 import { refreshInterfal } from 'shared/const/api';
+
+interface DisplayedContentProps {
+  news: NewsType[] | undefined;
+  error: boolean;
+  isLoading: boolean;
+}
+
+const DisplayedContent = ({ news, error, isLoading }: DisplayedContentProps) => {
+  if (news) {
+    return <NewsList news={news} />;
+  }
+  if (error) {
+    return <Error />;
+  }
+  if (isLoading) {
+    return <Loader />;
+  }
+  return null;
+};
 
 const AllNews = () => {
   const dispatch = useAppDispatch();
@@ -16,7 +35,7 @@ const AllNews = () => {
     isFetching,
     error,
     refetch,
-  } = newsApi.useGetAllNewsQuery(undefined, { pollingInterval: refreshInterfal });
+  } = newsApi.useGetAllNewsQuery({}, { pollingInterval: refreshInterfal });
 
   const handleRefetch = () => {
     dispatch(uiActions.showPopUp());
@@ -29,9 +48,7 @@ const AllNews = () => {
         <Title>Newest</Title>
         <Refresh isFetching={isFetching} handleClick={handleRefetch} />
       </TitleContainer>
-      {news && <NewsList news={news} />}
-      {error && <Error />}
-      {isLoading && <Loader />}
+      <DisplayedContent news={news} isLoading={isLoading} error={!!error} />
       <PopUp content="Refreshed" />
     </Container>
   );
@@ -60,7 +77,7 @@ const TitleContainer = styled.div`
   }
 `;
 
-const Title = styled.span`
+const Title = styled.h2`
   font-size: 30px;
   @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
     font-size: 28px;

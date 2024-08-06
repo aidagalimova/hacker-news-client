@@ -39,7 +39,7 @@ const Container = styled(PixelContainer)`
   }
 `;
 
-const Title = styled.span`
+const Title = styled.h2`
   font-size: 24px;
   @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
     font-size: 20px;
@@ -49,7 +49,7 @@ const Title = styled.span`
   }
 `;
 
-const User = styled.div`
+const User = styled.span`
   position: absolute;
   top: -14px;
   left: 24px;

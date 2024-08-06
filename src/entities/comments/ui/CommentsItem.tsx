@@ -12,8 +12,8 @@ interface CommentsItemProps {
   isChild?: boolean;
 }
 
-export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
-  const isHaveComments = !!comment.comments.length;
+export const CommentsItem = ({ comment, isChild = false }: CommentsItemProps) => {
+  const hasComments = !!comment.comments.length;
   const [isCommentsOpen, setIsCommentsOpen] = useState(false);
   const [isCommentsLoaded, setIsCommentsLoaded] = useState(false);
 
@@ -30,7 +30,7 @@ export const CommentsItem = ({ comment, isChild }: CommentsItemProps) => {
       <CommentContainer className={!isChild ? '' : 'reply'}>
         <CommentContent dangerouslySetInnerHTML={{ __html: comment.content }}></CommentContent>
         <CommentsCountContainer>
-          {isHaveComments && (
+          {hasComments && (
             <CommentCount onClick={handleOpen}>
               {comment.commentsCount} comments
               {isCommentsOpen ? <DropUp /> : <DropDown />}

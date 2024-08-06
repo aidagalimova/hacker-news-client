@@ -22,7 +22,7 @@ const Comments = ({ newsId }: CommentsProps) => {
     refetch,
   } = commentApi.useGetCommentsByIdQuery(newsId, { pollingInterval: refreshInterfal });
 
-  if (isLoading) {
+  if (isLoading && !comments) {
     return <Loader />;
   }
 
@@ -31,7 +31,7 @@ const Comments = ({ newsId }: CommentsProps) => {
     refetch();
   };
 
-  if (error) {
+  if (error && !comments) {
     return (
       <Error>
         <Refresh isFetching={isFetching} handleClick={handleRefetch} size={IconSize.Small} />
@@ -78,7 +78,7 @@ const TitleContainer = styled.div`
   background-color: ${(props) => props.theme.primaryBg};
 `;
 
-const Title = styled.span`
+const Title = styled.h3`
   user-select: none;
   font-size: 20px;
   @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {

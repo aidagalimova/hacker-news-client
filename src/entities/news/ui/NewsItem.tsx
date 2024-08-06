@@ -64,9 +64,10 @@ const Body = styled.div`
   justify-content: space-between;
 `;
 
-const Title = styled.span`
+const Title = styled.h3`
   font-size: 32px;
   font-family: monospace;
+  font-weight: 400;
   @media (max-width: ${({ theme }) => theme.breakpoints.iPad}px) {
     font-size: 28px;
   }

@@ -6,7 +6,7 @@ export const newsApi = createApi({
   reducerPath: 'newsApi',
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
-    getAllNews: builder.query<NewsType[], void>({
+    getAllNews: builder.query<NewsType[], Record<string, never>>({
       query: () => `news/`,
     }),
     getNewsById: builder.query<FullNews, string>({

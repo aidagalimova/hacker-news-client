@@ -11,16 +11,20 @@ interface NewsProps {
 const FullNews = ({ id }: NewsProps) => {
   const { data: news, isLoading, error } = newsApi.useGetNewsByIdQuery(id);
 
-  if (isLoading) {
+  if (isLoading && !news) {
     return <Loader />;
   }
 
   return (
     <Container>
       <BackLink />
-      {error && <Error />}
-      {news && <News news={news} />}
-      {!error && <Comments newsId={id} />}
+      {news && (
+        <>
+          <News news={news} />
+          <Comments newsId={id} />
+        </>
+      )}
+      {error && !news && <Error />}
     </Container>
   );
 };
