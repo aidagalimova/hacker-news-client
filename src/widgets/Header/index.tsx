@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { ReactComponent as Logo } from 'shared/assets/icons/play.svg';
+import Logo from 'shared/assets/icons/play.svg?react';
 import { ContentLayout } from 'shared/styledComponents';
 
 interface HeaderProps {

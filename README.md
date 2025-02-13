@@ -1,4 +1,4 @@
-### `npm run start`
+### `npm run dev`
 
 Для запуска в режиме разработчика на http://localhost:3000
 

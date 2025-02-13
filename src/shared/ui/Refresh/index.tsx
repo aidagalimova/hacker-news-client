@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as RefreshIcon } from 'shared/assets/icons/refreshIcon.svg';
+import RefreshIcon from 'shared/assets/icons/refreshIcon.svg?react';
 
 export enum IconSize {
   Small = 'small',

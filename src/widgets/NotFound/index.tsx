@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as SadCat } from 'shared/assets/icons/sadCat.svg';
+import SadCat from 'shared/assets/icons/sadCat.svg?react';
 import { BackLink } from 'shared/ui/BackLink';
 export const NotFound = () => {
   return (

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { News } from '../model/types/newsType';
-import { ReactComponent as Star } from 'shared/assets/icons/star.svg';
+import Star from 'shared/assets/icons/star.svg?react';
 import { PixelContainer, Tooltip } from 'shared/styledComponents';
 
 interface NewsItemProps {

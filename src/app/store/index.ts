@@ -1,7 +1,7 @@
+import { useDispatch } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { commentApi } from 'entities/comments';
 import { newsApi } from 'entities/news';
-import { useDispatch } from 'react-redux';
 import { uiReducer } from 'shared/uiSlice';
 
 const rootReducer = combineReducers({
