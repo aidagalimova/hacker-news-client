@@ -1,7 +1,7 @@
+import { createBrowserRouter } from 'react-router-dom';
 import MainPage from 'pages/Main';
 import NewsPage from 'pages/News';
 import NotFoundPage from 'pages/NotFoundPage';
-import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {

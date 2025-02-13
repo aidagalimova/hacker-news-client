@@ -1,14 +1,18 @@
-FROM node:16-alpine AS build
+FROM node:22.1.0-alpine3.19 as build
 
-WORKDIR /app
+WORKDIR /usr/app
 
-ENV PATH /app/node_modules/.bin:$PATH
+COPY . /usr/app/
 
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm ci
 
-COPY . ./
+RUN npm run build
 
-CMD ["npm", "start"]
+
+FROM nginxinc/nginx-unprivileged
+
+EXPOSE 8080
+
+COPY ./docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+
+COPY --from=build /usr/app/dist /usr/share/nginx/html
